@@ -3,15 +3,17 @@
   "name": "Indeed Interaction Extension",
   "version": "1.0",
   "description": "Clicks 'Apply Now' buttons on Indeed",
-  "permissions": ["activeTab", "scripting"],
+  "permissions": [ "scripting" ],
+  "host_permissions": [ "<all_urls>" ],
+
   "action": {
     "default_popup": "apply.html",
     "default_icon": "hello_extensions.png"
   },
   "content_scripts": [
     {
-      "matches": ["*://*.indeed.com/*"],
-      "js": ["clickApplyScript.js"]
+      "matches": [ "*://*.indeed.com/*" ],
+      "js": [ "clickApplyScript.js" ]
     }
   ]
 }
